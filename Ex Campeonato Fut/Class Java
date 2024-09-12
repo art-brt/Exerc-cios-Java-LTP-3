@@ -1,0 +1,58 @@
+package brasileirao;
+
+public class mengudo {
+    private String nome;
+    private double vitorias;
+    private double empates;
+    private double saldoGols;
+    
+    public mengudo (String nome, double vitorias, double empates, double saldoGols){
+        this.nome = nome;
+        this.vitorias = (vitorias<0?-vitorias:vitorias);
+        this.empates = (empates<0?-empates:empates);
+        this.saldoGols = (saldoGols<0?-saldoGols:saldoGols);      
+    }
+    public double pontos(){
+        return vitorias*3+empates;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getVitorias() {
+        return vitorias;
+    }
+
+    public void setVitorias(double vitorias) {
+        this.vitorias = (vitorias<0?-vitorias:vitorias);
+    }
+
+    public double getEmpates() {
+        return empates;
+    }
+
+    public void setEmpates(double empates) {
+        this.empates = (empates<0?-empates:empates);
+    }
+
+    public double getSaldoGols() {
+        return saldoGols;
+    }
+
+    public void setSaldoGols(double saldoGols) {
+        this.saldoGols = (saldoGols<0?-saldoGols:saldoGols);
+    }
+    
+    @Override
+    public String toString() {
+        String M="Time: "+nome;
+        M+=String.format("\nVitorias:%.0f\nEmpates:%.0f\nPontos:%.0f\n",vitorias,empates,pontos());
+        return M;
+    }
+
+}
