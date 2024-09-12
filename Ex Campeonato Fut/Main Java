@@ -1,0 +1,12 @@
+package brasileirao;
+
+public class Brasileirao {
+
+   
+    public static void main(String[] args) {
+      mengudo m=new mengudo ("Flamengo", 28, 6, 49);
+      
+      System.out.println(m);    
+    }
+    
+}
