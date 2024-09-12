@@ -1,0 +1,11 @@
+package lojao;
+
+public class Lojao {
+
+    public static void main(String[] args) {
+         produto p=new produto ("Shampoo", 2024, 29.99, 5, 2);
+         
+         System.out.println(p);
+    }
+    
+}
